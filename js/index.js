@@ -9,6 +9,7 @@ const textoValor = document.querySelector('#textoValor');
 const textoEntrada = document.querySelector('#textoEntrada');
 const textoTaxaJuros = document.querySelector('#textoTaxaJuros');
 const textoPrazo = document.querySelector('#textoPrazo');
+const tabela = document.querySelector('.tabela');
 
 function limpaCorpoTabela(){
     while(corpoTabela.firstChild){
@@ -39,4 +40,5 @@ botaoCalcular.addEventListener('click', function(){
     }
     simulacao.calcParcelasMensais();
     simulacao.exibeParcelas();
+    tabela.style.visibility = "visible";
 });

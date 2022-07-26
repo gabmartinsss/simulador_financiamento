@@ -72,6 +72,9 @@ body{
 tr:nth-child(even){
     background-color: rgba(255, 166, 0, 0.425);
 }
+table{
+    visibility: collapse;
+}
 table, th, td{
     border: 1px solid white;
     border-collapse: collapse;
