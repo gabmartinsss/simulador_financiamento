@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Simulador de Financiamento</title>
-    <style>
-        body{
-            background-color: rgba(10, 10, 95, 0.815);
-            color: white;
-            font: 11pt Tahoma;
-        }
-        tr:nth-child(even){
-            background-color: rgba(248, 167, 16, 0.425);
-        }
-        table, th, td{
-            border: 1px solid white;
-            border-collapse: collapse;
-            padding: 15px;
-            margin-top: 25px;
-        }
-    </style>
 </head>
+
 <body>
-    <h2>Simulador de Financiamento com sistema de Amortização Constante (SAC)</h2>
-    <input id="textoValor" type="text" placeholder="Valor do Bem"><br>
-    <input id="textoEntrada" type="text" placeholder="Valor da Entrada"><br>
-    <input id="textoTaxaJuros" type="text" placeholder="Taxa de Juros (%)"><br>
-    <input id="textoPrazo" type="text" placeholder="Prazo (em meses)"><br>
-    <button id="botaoCalcular">Calcular</button>
-    <input id="comCarencia" type="checkbox">Com carência?
-    <select id="listaSuspensa" hidden>
-        <option value="2">2 meses</option>
-        <option value="3">3 meses</option>
-        <option value="4">4 meses</option>
-    </select>
+    <div class="h2-img">
+        <h2>Simulador de Financiamento com sistema de Amortização Constante (SAC)</h2>
+        <img src="./images/money.png" alt="money" />
+    </div>
+    <div class="box">
+        <span class="header">Simule seu financiamento
+            <img src="./images/dinheiro.png" />
+        </span><br>
+        <div class="input-container">
+            <input id="textoValor" type="text" placeholder="Valor do Bem"><br>
+        </div>
+        <div class="input-container">
+            <input id="textoEntrada" type="text" placeholder="Valor da Entrada"><br>
+        </div>
+        <div class="input-container">
+            <input id="textoTaxaJuros" type="text" placeholder="Taxa de Juros (%)"><br>
+        </div>
+        <div class="input-container">
+            <input id="textoPrazo" type="text" placeholder="Prazo (em meses)"><br>
+        </div>
+        <div class="checkbox-carencia">
+            <input id="comCarencia" type="checkbox">Com carência?
+            <select id="listaSuspensa" hidden>
+                <option value="2">2 meses</option>
+                <option value="3">3 meses</option>
+                <option value="4">4 meses</option>
+                <option value="6">6 meses</option>
+            </select>
+        </div>
+        <br><button id="botaoCalcular">Calcular</button>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -47,6 +54,8 @@
         </thead>
         <tbody id="corpoTabela"> </tbody>
     </table>
+
     <script type="module" src="./index.js"></script>
 </body>
+
 </html>
